@@ -1,10 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vadim Kharovyuk</title>
+<!--    <link rel="stylesheet" href="static/style.css">-->
 </head>
+<style>
+    /* Global Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    /* Header */
+    header {
+        background-color: #070707;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(231, 14, 14, 0.1);
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0 30px;
+    }
+
+    nav a {
+        color: #fff;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+        color: #d00535;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 20px;
+        background-image: url("https://scontent.fayt2-1.fna.fbcdn.net/v/t1.6435-9/56711223_2259555641028619_8756391585769324544_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gkhiHbnOGr4Ab71UC-e&_nc_ht=scontent.fayt2-1.fna&oh=00_AfDOvYhrW5Nvc7FTBXlS7RXLmVfpvFCAeZvAACSET3AHdQ&oe=664164FB") ;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 700px;
+    }
+
+
+    .hero-content {
+        flex: 1;
+        padding-right: 40px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        margin-top: 300px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .cta {
+        margin-left: 70px;
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+        background-color: #024da6;
+    }
+
+    .hero-image img {
+        max-width: 400px;
+       border-radius: 20%;
+
+    }
+
+    /* About Section */
+    .about {
+
+        padding: 80px 50px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .about-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about-text {
+        flex: 1;
+        padding-right: 40px;
+    }
+
+    .about-text p {
+        margin-bottom: 20px;
+    }
+
+    .about-image img {
+        max-width: 350px;
+        height: auto;
+        border-radius: 90px;
+        margin-bottom: 90px;
+
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+
+        padding: 80px 50px;
+        background-color: #111927;
+        background-image:
+                radial-gradient(at 47% 33%, hsl(163, 65%, 41%) 0, transparent 59%),
+                radial-gradient(at 82% 65%, hsl(218.18, 78%, 52%) 0, transparent 55%)
+    }
+
+    .portfolio h2 {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .portfolio-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .portfolio-item h3 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .portfolio-item p {
+        margin-top: 10px;
+    }
+
+    .portfolio-link {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 80px 20px;
+    }
+
+    .contact h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .contact-form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .contact-form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    .contact-form button {
+        display: block;
+        margin-top: 20px;
+    }
+
+    /* Color Themes */
+    /* Blue Theme */
+    .blue-theme .cta,
+    .blue-theme nav a:hover,
+    .blue-theme .portfolio {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .blue-theme a {
+        color: #007bff;
+    }
+
+    /* Green Theme */
+    .green-theme .cta,
+    .green-theme nav a:hover,
+    .green-theme .portfolio {
+        background-color: #28a745;
+        color: #fff;
+    }
+
+    .green-theme a {
+        color: #28a745;
+    }
+
+    /* Red Theme */
+    .red-theme .cta,
+    .red-theme nav a:hover,
+    .red-theme .portfolio {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    .red-theme a {
+        color: #dc3545;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #c9c1c0;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+    }
+    .welcome-to-myport{
+        color: #c9c1c0;
+        margin-left: 70px;
+
+    }
+
+    .welcome-to-myport:hover {
+        color: #56ef6f; /* Замените на желаемый цвет */
+    }
+    .mainP{
+        color: white;
+        margin-left: 70px;
+    }
+    .order{
+        background-color: #070707;
+      height: 170px;
+    }
+    .order-text{
+        text-align: center;
+        color: white;
+
+    }
+
+
+
+
+
+</style>
 <body>
-$END$
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="welcome-to-myport">Welcome to my Portfolio</h1>
+            <p class="mainP">I am a skilled web developer with expertise in HTML, CSS, JavaScript, and various frameworks.</p>
+            <a href="#" class="cta">View My Work</a>
+        </div>
+<!--        <div class="hero-image">-->
+<!--            <img src="/static/Main1.jpg" alt="Developer Image">-->
+<!--        </div>-->
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I am a passionate web developer with a strong background in creating dynamic and responsive websites. I have a keen eye for detail and a deep understanding of web technologies, enabling me to deliver high-quality projects that meet the needs of my clients.</p>
+                <p>Throughout my career, I have developed a diverse set of skills, including proficiency in HTML, CSS, JavaScript, and various frameworks such as React, Angular, and Vue.js. I am constantly learning and staying up-to-date with the latest industry trends and best practices.</p>
+            </div>
+            <div class="about-image">
+                <img src="/static/dubaiSolo.jpg" alt="About Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A responsive website for a local business.</p>
+                <a href="#" class="portfolio-link">View Project</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>An e-commerce website with a modern design.</p>
+                <a href="#" class="portfolio-link">View Project</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A web application for a SaaS platform.</p>
+                <a href="#" class="portfolio-link">View Project</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="project3.jpg" alt="Project 4">
+                <h3>Project 3</h3>
+                <p>A web application for a SaaS platform.</p>
+                <a href="#" class="portfolio-link">View Project</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="project3.jpg" alt="Project 5">
+                <h3>Project 3</h3>
+                <p>A web application for a SaaS platform.</p>
+                <a href="#" class="portfolio-link">View Project</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="project3.jpg" alt="Project 6">
+                <h3>Project 3</h3>
+                <p>A web application for a SaaS platform.</p>
+                <a href="#" class="portfolio-link">View Project</a>
+            </div>
+        </div>
+    </section>
+    <section class="order">
+        <h1 class="order-text" > заказ</h1>
+
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="cta">Send Message</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Developer Portfolio. All rights reserved.</p>
+</footer>
 </body>
 </html>
