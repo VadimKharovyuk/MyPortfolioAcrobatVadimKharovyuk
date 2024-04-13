@@ -12,18 +12,25 @@
         font-family: 'Arial', sans-serif;
         margin: 0;
         padding: 0;
-        color: #333;
+        background-color: #111927;
+        background-image:
+                radial-gradient(at 47% 33%, hsl(163, 65%, 41%) 0, transparent 59%),
+                radial-gradient(at 82% 65%, hsl(218.18, 78%, 52%) 0, transparent 55%)
     }
+
 
     a {
         text-decoration: none;
         color: #007bff;
     }
+    a:hover {
+        color: #cb0db2;
+    }
 
     /* Header */
     header {
         background-color: #070707;
-        padding: 20px;
+        padding: 40px;
         box-shadow: 0 2px 5px rgba(231, 14, 14, 0.1);
     }
 
@@ -55,11 +62,11 @@
         justify-content: space-between;
         align-items: center;
         padding: 80px 20px;
-        background-image: url("https://scontent.fayt2-1.fna.fbcdn.net/v/t1.6435-9/56711223_2259555641028619_8756391585769324544_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gkhiHbnOGr4Ab71UC-e&_nc_ht=scontent.fayt2-1.fna&oh=00_AfDOvYhrW5Nvc7FTBXlS7RXLmVfpvFCAeZvAACSET3AHdQ&oe=664164FB") ;
+        background-image: url("/static/galereya1.JPG");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 700px;
+        height: 900px;
     }
 
 
@@ -102,13 +109,13 @@
 
     /* About Section */
     .about {
-
         padding: 80px 50px;
     }
 
     .about h2 {
-        font-size: 32px;
+        font-size: 30px;
         margin-bottom: 40px;
+        text-align: center;
     }
 
     .about-content {
@@ -120,17 +127,21 @@
     .about-text {
         flex: 1;
         padding-right: 40px;
+
     }
 
     .about-text p {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+        margin-left: 30px;
     }
 
     .about-image img {
-        max-width: 350px;
+        max-width: 400px;
         height: auto;
-        border-radius: 90px;
+        border-radius: 40px;
         margin-bottom: 90px;
+        margin-right: 40px;
 
     }
 
@@ -157,10 +168,21 @@
 
     .portfolio-item img {
         width: 100%;
-        height: 200px;
+        height: 300px;
         object-fit: cover;
-        border-radius: 4px;
+        border-radius: 7px;
+
     }
+    .portfolio-item img {
+        transition: transform 0.4s ease-in-out; /* добавляем плавный переход */
+    }
+
+    .portfolio-item img:hover {
+        box-shadow: 0 0 120px #14e09a; /* Зеленая тень при наведении */
+
+        /*transform: scale(1.1); !* увеличиваем изображение на 20% при наведении *!*/
+    }
+
 
     .portfolio-item h3 {
         font-size: 20px;
@@ -176,78 +198,13 @@
         margin-top: 20px;
     }
 
-    /* Contact Section */
-    .contact {
-        padding: 80px 20px;
-    }
 
     .contact h2 {
         font-size: 32px;
         margin-bottom: 40px;
     }
 
-    .contact-form {
-        max-width: 500px;
-        margin: 0 auto;
-    }
 
-    .contact-form label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-bottom: 20px;
-    }
-
-    .contact-form button {
-        display: block;
-        margin-top: 20px;
-    }
-
-    /* Color Themes */
-    /* Blue Theme */
-    .blue-theme .cta,
-    .blue-theme nav a:hover,
-    .blue-theme .portfolio {
-        background-color: #007bff;
-        color: #fff;
-    }
-
-    .blue-theme a {
-        color: #007bff;
-    }
-
-    /* Green Theme */
-    .green-theme .cta,
-    .green-theme nav a:hover,
-    .green-theme .portfolio {
-        background-color: #28a745;
-        color: #fff;
-    }
-
-    .green-theme a {
-        color: #28a745;
-    }
-
-    /* Red Theme */
-    .red-theme .cta,
-    .red-theme nav a:hover,
-    .red-theme .portfolio {
-        background-color: #dc3545;
-        color: #fff;
-    }
-
-    .red-theme a {
-        color: #dc3545;
-    }
 
     /* Footer */
     footer {
@@ -261,27 +218,95 @@
         margin: 0;
     }
     .welcome-to-myport{
-        color: #c9c1c0;
+        color: #ffffff;
         margin-left: 70px;
 
+
     }
 
-    .welcome-to-myport:hover {
-        color: #56ef6f; /* Замените на желаемый цвет */
-    }
+
     .mainP{
-        color: white;
+        color: #ef3e3e;
         margin-left: 70px;
     }
     .order{
+
         background-color: #070707;
-      height: 170px;
+      height: 200px;
     }
     .order-text{
         text-align: center;
         color: white;
+        margin-top:0px;
 
     }
+
+    .navMain {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 30px; /* Добавляем отступ вниз */
+        /* Другие свойства вашей секции, такие как ширина, высота, и т.д., могут быть добавлены по вашему усмотрению */
+    }
+
+    .photo-gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px; /* Высота секции */
+        overflow-x: auto; /* Добавить горизонтальную прокрутку при необходимости */
+    }
+
+    .photo-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Позволить элементам переноситься на новую строку */
+        width: 100%; /* Ширина контейнера фотографий */
+        max-width: 100%; /* Не позволить контейнеру быть шире родительского элемента */
+    }
+
+    .photo-wrapper img {
+        height: 250px; /* Установить фиксированную высоту для изображений */
+        width: auto; /* Автоматический расчет ширины на основе высоты */
+        margin: 10px; /* Добавить небольшие отступы между изображениями */
+        transition: box-shadow 0.3s; /* Анимация для тени */
+    }
+
+    .photo-wrapper img:hover {
+        box-shadow: 0 0 120px #2acc8e; /* Зеленая тень при наведении */
+    }
+
+
+    .photo-wrapper img {
+        transition: transform 0.5s ease-in-out; /* добавляем плавный переход */
+    }
+
+    .photo-wrapper img:hover {
+        transform: scale(1.1); /* применяем эффект увеличения при наведении */
+    }
+
+
+    .parallax-section {
+        height: 400px; /* Высота секции */
+        background-image: url('background.jpg'); /* Фоновое изображение */
+        background-size: cover;
+        background-attachment: fixed; /* Фиксация фонового изображения */
+        background-position: center;
+        color: #ffffff; /* Цвет текста */
+        text-align: center;
+        padding: 100px 0; /* Внутренние отступы */
+    }
+
+    .parallax-content {
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+
+
 
 
 
@@ -290,11 +315,11 @@
 </style>
 <body>
 <header>
-    <nav>
+    <nav class="navMain" >
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#Mywork">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
@@ -303,93 +328,118 @@
 <main>
     <section class="hero">
         <div class="hero-content">
-            <h1 class="welcome-to-myport">Welcome to my Portfolio</h1>
-            <p class="mainP">I am a skilled web developer with expertise in HTML, CSS, JavaScript, and various frameworks.</p>
-            <a href="#" class="cta">View My Work</a>
+            <h1 class="welcome-to-myport">Vadim Kharovyuk</h1>
+            <p class="mainP">Легкость, грация, мастерство: в каждом движении – искусство!</p>
+            <a href="#aboutme" class="cta">View My Work</a>
         </div>
 <!--        <div class="hero-image">-->
 <!--            <img src="/static/Main1.jpg" alt="Developer Image">-->
 <!--        </div>-->
     </section>
 
-    <section class="about">
+    <section class="about" id="aboutme">
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>I am a passionate web developer with a strong background in creating dynamic and responsive websites. I have a keen eye for detail and a deep understanding of web technologies, enabling me to deliver high-quality projects that meet the needs of my clients.</p>
-                <p>Throughout my career, I have developed a diverse set of skills, including proficiency in HTML, CSS, JavaScript, and various frameworks such as React, Angular, and Vue.js. I am constantly learning and staying up-to-date with the latest industry trends and best practices.</p>
+                <p>Привет! Я Вадим, профессиональный воздушный гимнаст с опытом работы более 8 лет. Моя страсть к гимнастике привела меня в удивительные места по всему миру, включая Китай, Турцию и ОАЭ. За годы практики я усвоил множество стилей и техник, что позволяет мне создавать уникальные выступления, полные грации и красоты.</p>
+                <p>Hello! I'm Vadim, a professional trapeze artist with more than 8 years of experience. My passion for gymnastics has taken me to amazing places around the world including China, Turkey and the UAE. Over the years of practice, I have mastered many styles and techniques, allowing me to create unique performances full of grace and beauty.</p>
             </div>
             <div class="about-image">
-                <img src="/static/dubaiSolo.jpg" alt="About Image">
+                <img src="/static/mainpic.jpg" alt="About Image">
             </div>
         </div>
     </section>
 
-    <section class="portfolio">
-        <h2>My Portfolio</h2>
+
+    <section class="photo-gallery">
+        <div class="photo-wrapper">
+            <img src="/static/galereya4.JPG" alt="Photo 1">
+            <img src="/static/galereya2.JPG" alt="Photo 2">
+            <img src="/static/IMG_1635.JPG" alt="Photo 3">
+            <img src="/static/lena.JPG" alt="Photo 4">
+
+        </div>
+    </section>
+
+
+
+    <section class="portfolio" id="Mywork">
+        <h2 style="text-align: center">My Portfolio</h2>
         <div class="portfolio-items">
             <div class="portfolio-item">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>A responsive website for a local business.</p>
-                <a href="#" class="portfolio-link">View Project</a>
+                <img src="/static/circle.JPG" alt="Project 1">
+                <h3>Китай 2015-2016</h3>
+                <p>В 2015–2016 годах я имел уникальную возможность поработать в Китае в цирковом представлении. Это был удивительный опыт, полный испытаний и новых открытий. В этом захватывающем мире я смог применить свои навыки воздушного гимнаста и создать выступления, которые захватывали дух зрителей. Работа в Китае дала мне ценный опыт работы в международной команде и позволила расширить свой профессиональный кругозор. Этот период останется незабываемым в моей карьере, и я благодарен за возможность погрузиться в культуру и творческую энергию Китая. </p>
+                <a href="https://www.youtube.com/watch?v=SBgQyhJwQnA&t=149s" class="portfolio-link">View Project</a>
             </div>
             <div class="portfolio-item">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>An e-commerce website with a modern design.</p>
-                <a href="#" class="portfolio-link">View Project</a>
+                <img src="/static/prof111.JPG" alt="Project 2">
+                <h3>Китай 2016-2017</h3>
+                <p>В 2015–2016 годах я был частью уникального театрального проекта в Китае. Этот период ознаменовался для меня невероятным творческим ростом и профессиональным развитием. Работа в китайском театре дала мне ценный опыт сотрудничества с местными артистами и режиссерами, а также позволила расширить мои горизонты в области сценического искусства. Благодаря этой работе я смог углубиться в культуру Китая и научиться новым методам творчества. Этот опыт стал для меня настоящим вызовом, который помог мне стать лучшим профессионалом и открыть для себя новые горизонты в мире театрального искусства.</p>
+                <a href="https://www.youtube.com/watch?v=kBCr0VJm4o8" class="portfolio-link">View Project</a>
             </div>
             <div class="portfolio-item">
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>A web application for a SaaS platform.</p>
-                <a href="#" class="portfolio-link">View Project</a>
+                <img src="/static/port333.JPG" alt="Project 3">
+                <h3>Китай 2017-2018</h3>
+                <p>В период с 2017 по 2018 годы я имел уникальную возможность работать в Китае в цирковом представлении. Это был захватывающий период в моей карьере, полный ярких впечатлений и творческих достижений. В цирке я обучался и работал над различными акробатическими номерами, участвовал в создании и реализации разнообразных хореографических постановок. Этот опыт помог мне улучшить свои навыки воздушного гимнаста и расширить арсенал трюков и выступлений. Работа в китайском цирке также дала мне возможность познакомиться с уникальной культурой и традициями этой страны, что вдохновило меня на создание новых и захватывающих выступлений.</p>
+                <a href="https://www.youtube.com/watch?v=b-XltBFb74I" class="portfolio-link">View Project</a>
             </div>
             <div class="portfolio-item">
-                <img src="project3.jpg" alt="Project 4">
-                <h3>Project 3</h3>
-                <p>A web application for a SaaS platform.</p>
-                <a href="#" class="portfolio-link">View Project</a>
+                <img src="/static/galereya5.JPG" alt="Project 4">
+                <h3>Китай 2018-2019</h3>
+                <p>В период с 2018 по 2019 годы я присоединился к команде ночного клуба "Oscar" в Китае, где продолжил свою творческую деятельность в качестве воздушного гимнаста. Работа в ночном клубе была увлекательным опытом, который дал мне возможность не только продемонстрировать свое мастерство и талант на новой сцене, но и расширить свой художественный арсенал. В "Oscar" я участвовал в создании уникальных номеров, которые сочетали в себе высокий уровень акробатики, элегантность и харизму. Работа в ночном клубе предоставила мне ценный опыт взаимодействия с аудиторией различных культур и национальностей, что обогатило мой творческий путь и вдохновило на новые творческие идеи.</p>
+                <a href="https://www.youtube.com/watch?v=e1WU4-81VEY" class="portfolio-link">View Project</a>
             </div>
             <div class="portfolio-item">
-                <img src="project3.jpg" alt="Project 5">
-                <h3>Project 3</h3>
-                <p>A web application for a SaaS platform.</p>
-                <a href="#" class="portfolio-link">View Project</a>
+                <img src="/static/oscarDou.JPG" alt="Project 5">
+                <h3>Турция 2020-2022</h3>
+                <p>В период с 2020 по 2022 годы я работал в Турции, где продолжал свою карьеру воздушного гимнаста. Этот период был для меня значимым, так как Турция предоставила мне новые возможности для развития и самовыражения.Работа в Турции подарила мне незабываемые впечатления и опыт, расширив горизонты моего творчества и позволив воплотить в жизнь новые идеи и концепции в выступлениях. Я был частью команды профессионалов, с которыми удалось создать захватывающие и запоминающиеся номера, покорившие сердца зрителей. Работа в Турции стала для меня важным этапом в моей карьере, который помог мне вырасти как артисту и раскрыть свой творческий потенциал.</p>
+                <a href="https://www.youtube.com/watch?v=5PEGOo0mizk" class="portfolio-link">View Project</a>
             </div>
             <div class="portfolio-item">
-                <img src="project3.jpg" alt="Project 6">
-                <h3>Project 3</h3>
-                <p>A web application for a SaaS platform.</p>
-                <a href="#" class="portfolio-link">View Project</a>
+                <img src="/static/port60.JPG" alt="Project 6">
+                <h3>Дубай 2022-2023</h3>
+                <p>В период с 2022 по 2023 годы я работал в Дубае, где продолжал свою карьеру в качестве воздушного гимнаста. Работа в этом мировом центре развлечений была для меня вдохновляющим и захватывающим опытом. В Дубае я принимал участие в выступлениях в престижных развлекательных комплексах, где мог демонстрировать свои навыки перед многочисленной аудиторией из разных стран мира.
+
+                    Мое участие в шоу в Дубае позволило мне встретиться и поработать с лучшими артистами и профессионалами индустрии развлечений. Мы создавали захватывающие выступления, которые не только развлекали зрителей, но и вдохновляли их на новые высоты. Этот опыт стал для меня ценным шагом в развитии моей карьеры и позволил мне расширить свои горизонты как артиста.</p>
+                <a href="https://www.youtube.com/watch?v=EivS1-tbVmo" class="portfolio-link">View Project</a>
             </div>
         </div>
     </section>
+
+
+
+    <section class="parallax-section" id="parallax">
+        <div class="parallax-content">
+            <h2>Parallax Section</h2>
+            <p>This is a parallax section. It creates a scrolling effect where the background image moves at a different speed than the foreground content.</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
     <section class="order">
         <h1 class="order-text" > заказ</h1>
 
     </section>
 
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <form class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit" class="cta">Send Message</button>
-        </form>
-    </section>
 </main>
 
 <footer>
     <p>&copy; 2023 Developer Portfolio. All rights reserved.</p>
 </footer>
+<script>
+    window.addEventListener('scroll', function() {
+        let offset = window.pageYOffset;
+        document.getElementById('parallax').style.backgroundPositionY = -offset * 0.5 + 'px'; // Изменение положения фонового изображения
+    });
+
+</script>
 </body>
 </html>
