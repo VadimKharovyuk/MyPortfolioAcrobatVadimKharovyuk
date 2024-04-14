@@ -41,7 +41,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url("/galereya1.JPG");
+    background-image: url("galereya1.JPG");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -195,7 +195,6 @@ button i {
     left: 50%;
     transform: translateX(-50%);
     top: 30px; /* Добавляем отступ вниз */
-    /* Другие свойства вашей секции, такие как ширина, высота, и т.д., могут быть добавлены по вашему усмотрению */
 }
 .photo-gallery {
     display: flex;
@@ -229,7 +228,7 @@ button i {
 }
 .parallax-section {
     height: 650px; /* Высота секции */
-    background-image: url('/paralax1.JPG'); /* Фоновое изображение */
+    background-image: url('paralax1.JPG'); /* Фоновое изображение */
     transform: translateZ(0);
     background-attachment: fixed; /* Фиксация фонового изображения */
     background-position: center;
@@ -305,7 +304,6 @@ button i {
     width: 100%; /* Занимает всю доступную ширину внутри родительского контейнера */
     height: 450px; /* Автоматическая высота, чтобы сохранить пропорции */
 }
-/* Для адаптивного дизайна */
 @media screen and (max-width: 768px) {
     .instagram-post {
         width: calc(50% - 10px); /* Ширина каждого поста (по 2 поста в ряд) на меньших экранах */
