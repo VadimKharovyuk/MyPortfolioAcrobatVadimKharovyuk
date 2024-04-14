@@ -351,9 +351,6 @@ button i {
 .contact-links a:hover {
     color: #007bff;
 }
-
-
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -395,8 +392,6 @@ button i {
     height: auto; /* Автоматическая высота, чтобы содержимое подстраивалось по высоте */
 
 }
-
-
 .instagram-post {
     width: calc(20% - 10px); /* Ширина каждого поста (по 5 постов в ряду) с учетом отступов */
     margin-bottom: 20px; /* Отступ между рядами */
