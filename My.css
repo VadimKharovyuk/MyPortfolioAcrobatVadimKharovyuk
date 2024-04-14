@@ -228,7 +228,7 @@ button i {
 }
 .parallax-section {
     height: 650px; /* Высота секции */
-    background-image: url('paralax1.JPG'); /* Фоновое изображение */
+    background-image: url('paralaxMian.JPG'); /* Фоновое изображение */
     transform: translateZ(0);
     background-attachment: fixed; /* Фиксация фонового изображения */
     background-position: center;
