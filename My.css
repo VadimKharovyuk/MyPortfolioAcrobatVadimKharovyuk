@@ -53,7 +53,7 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     /*padding: 80px 20px;*/
-    background-image: url("/static/galereya1.JPG");
+    background-image: url("/galereya1.JPG");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -308,7 +308,7 @@ button i {
 .parallax-section {
 
     height: 650px; /* Высота секции */
-    background-image: url('/static/paralax1.JPG'); /* Фоновое изображение */
+    background-image: url('/paralax1.JPG'); /* Фоновое изображение */
     /*background-size: cover;*/
     transform: translateZ(0);
     background-attachment: fixed; /* Фиксация фонового изображения */
