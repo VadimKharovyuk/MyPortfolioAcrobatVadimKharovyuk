@@ -383,11 +383,31 @@
 
 
 
+    .instagram-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Распределение постов по ширине контейнера */
+        width: 100%; /* Ширина контейнера по умолчанию */
+        height: auto; /* Автоматическая высота, чтобы содержимое подстраивалось по высоте */
+    }
 
 
+    .instagram-post {
+        width: calc(20% - 10px); /* Ширина каждого поста (по 5 постов в ряду) с учетом отступов */
+        margin-bottom: 20px; /* Отступ между рядами */
+    }
 
+    .instagram-post iframe {
+        width: 100%; /* Занимает всю доступную ширину внутри родительского контейнера */
+        height: 450px; /* Автоматическая высота, чтобы сохранить пропорции */
+    }
 
-
+    /* Для адаптивного дизайна */
+    @media screen and (max-width: 768px) {
+        .instagram-post {
+            width: calc(50% - 10px); /* Ширина каждого поста (по 2 поста в ряд) на меньших экранах */
+        }
+    }
 
 
 
@@ -398,10 +418,6 @@
 </style>
 <body>
 <header>
-
-
-
-
 
     <nav class="navMain" >
         <ul>
@@ -539,12 +555,39 @@
 
 
 
+    <div class="instagram-container">
+        <div class="instagram-post">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Ck9AZg1M7Mj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                <!-- Содержимое Instagram-поста -->
+            </blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+
+        <div class="instagram-post">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Cjj2OuIvNzh/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                <!-- Содержимое Instagram-поста -->
+            </blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+
+        <div class="instagram-post">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/B1Z6hYkgTZ8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                <!-- Содержимое Instagram-поста -->
+            </blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+
+        <div class="instagram-post">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CsbsK90M8k_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                <!-- Содержимое Instagram-поста -->
+            </blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </div>
 
 
 
-
-
-
+        <!-- Повторите блок .instagram-post для каждого дополнительного поста -->
+    </div>
 
 
 
