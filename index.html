@@ -4,436 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vadim Kharovyuk</title>
-<!--    <link rel="stylesheet" href="static/style.css">-->
+    <link rel="stylesheet" href="My.css">
 </head>
-<style>
-    /* Global Styles */
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #111927;
-        background-image:
-                radial-gradient(at 47% 33%, hsl(163, 65%, 41%) 0, transparent 59%),
-                radial-gradient(at 82% 65%, hsl(218.18, 78%, 52%) 0, transparent 55%)
-    }
 
-
-    a {
-        text-decoration: none;
-        color: #007bff;
-    }
-    a:hover {
-        color: #09f114;
-    }
-
-    /* Header */
-    header {
-        background-color: #070707;
-        padding: 40px;
-        box-shadow: 0 2px 5px rgba(231, 14, 14, 0.1);
-    }
-
-    nav ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav li {
-        margin: 0 30px;
-    }
-
-    nav a {
-        color: #fff;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-        color: #d00535;
-    }
-
-    /* Hero Section */
-    .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        /*padding: 80px 20px;*/
-        background-image: url("/static/galereya1.JPG");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 900px;
-    }
-
-
-    .hero-content {
-        flex: 1;
-        padding-right: 40px;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-        margin-bottom: 20px;
-        margin-top: 300px;
-    }
-
-    .hero p {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-
-    .cta {
-        margin-left: 70px;
-        display: inline-block;
-        background-color: #007bff;
-        color: #fff;
-        padding: 12px 24px;
-        border-radius: 4px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
-
-    .cta:hover {
-        background-color: #024da6;
-    }
-
-    .hero-image img {
-        max-width: 400px;
-       border-radius: 20%;
-
-    }
-
-    /* About Section */
-    .about {
-        padding: 80px 50px;
-    }
-
-    .about h2 {
-        font-size: 30px;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .about-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .about-text {
-        flex: 1;
-        padding-right: 40px;
-
-    }
-
-    .about-text p {
-        margin-bottom: 50px;
-        text-align: center;
-        margin-left: 30px;
-    }
-
-    .about-image img {
-        max-width: 400px;
-        height: auto;
-        border-radius: 40px;
-        margin-bottom: 90px;
-        margin-right: 40px;
-
-    }
-
-    /* Portfolio Section */
-    .portfolio {
-        padding: 80px 50px;
-        background-color: #273352;
-        background-image:
-                radial-gradient(at 47% 33%, hsl(163, 65%, 41%) 0, transparent 59%),
-                radial-gradient(at 82% 65%, hsl(218.18, 78%, 52%) 0, transparent 55%)
-    }
-
-    .portfolio h2 {
-        font-size: 30px;
-        margin-bottom: 40px;
-    }
-
-    .portfolio-items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 40px;
-    }
-
-    .portfolio-item img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 7px;
-
-    }
-    .portfolio-item img {
-        transition: transform 0.4s ease-in-out; /* добавляем плавный переход */
-    }
-
-    .portfolio-item img:hover {
-        box-shadow: 0 0 120px #14e09a; /* Зеленая тень при наведении */
-
-        /*transform: scale(1.1); !* увеличиваем изображение на 20% при наведении *!*/
-    }
-
-
-    .portfolio-item h3 {
-        font-size: 20px;
-        margin-top: 20px;
-    }
-
-    .portfolio-item p {
-        margin-top: 10px;
-    }
-
-    .portfolio-link {
-        display: inline-block;
-        margin-top: 20px;
-    }
-
-
-    .contact h2 {
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
-
-
-
-    .welcome-to-myport{
-        color: #ffffff;
-        margin-left: 70px;
-
-
-    }
-
-
-    .mainP{
-        color: #ef3e3e;
-        margin-left: 70px;
-    }
-    /*.order{*/
-
-    /*    background-color: #070707;*/
-    /*  height: 200px;*/
-    /*}*/
-    .order {
-        height: 200px;
-        background-color: #070707;
-        border-radius: 30px;
-        text-align: center; /* Размещение содержимого секции по центру */
-
-    }
-
-
-
-
-    button {
-        background-color: #2584e3; /* Цвет фона кнопки */
-        color: white; /* Цвет текста кнопки */
-        border: none; /* Убираем границы */
-        padding: 10px 20px; /* Внутренние отступы */
-        border-radius: 5px; /* Закругление углов */
-        cursor: pointer; /* Изменение курсора при наведении */
-        transition: background-color 0.3s; /* Плавное изменение цвета фона при наведении */
-    }
-
-    button:hover {
-        background-color: #0056b3; /* Новый цвет фона при наведении */
-    }
-
-    button a {
-        color: inherit; /* Наследование цвета текста */
-        text-decoration: none; /* Убираем подчеркивание ссылки */
-    }
-
-    button i {
-        margin-right: 5px; /* Отступ между иконкой и текстом */
-    }
-
-
-
-    .order-text {
-        text-align: center; /* Центрирование текста */
-        background: linear-gradient(90deg, #12eeba, #b807e0); /* Градиентный фон */
-        -webkit-background-clip: text; /* Определение области, которую следует закрасить градиентом */
-        background-clip: text;
-        -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
-        margin-top: 0px; /* Отступ сверху */
-    }
-
-
-    .navMain {
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 30px; /* Добавляем отступ вниз */
-        /* Другие свойства вашей секции, такие как ширина, высота, и т.д., могут быть добавлены по вашему усмотрению */
-    }
-
-    .photo-gallery {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 400px; /* Высота секции */
-        overflow-x: auto; /* Добавить горизонтальную прокрутку при необходимости */
-    }
-
-    .photo-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap; /* Позволить элементам переноситься на новую строку */
-        width: 100%; /* Ширина контейнера фотографий */
-        max-width: 100%; /* Не позволить контейнеру быть шире родительского элемента */
-    }
-
-    .photo-wrapper img {
-        height: 250px; /* Установить фиксированную высоту для изображений */
-        width: auto; /* Автоматический расчет ширины на основе высоты */
-        margin: 10px; /* Добавить небольшие отступы между изображениями */
-        transition: box-shadow 0.3s; /* Анимация для тени */
-    }
-
-    .photo-wrapper img:hover {
-        box-shadow: 0 0 120px #2acc8e; /* Зеленая тень при наведении */
-    }
-
-
-    .photo-wrapper img {
-        transition: transform 0.5s ease-in-out; /* добавляем плавный переход */
-    }
-
-    .photo-wrapper img:hover {
-        transform: scale(1.1); /* применяем эффект увеличения при наведении */
-    }
-
-
-    .parallax-section {
-
-        height: 650px; /* Высота секции */
-        background-image: url('/static/paralax1.JPG'); /* Фоновое изображение */
-        /*background-size: cover;*/
-        transform: translateZ(0);
-        background-attachment: fixed; /* Фиксация фонового изображения */
-        background-position: center;
-        color: #ffffff; /* Цвет текста */
-        text-align: center;
-        padding: 100px 0px /* Внутренние отступы */
-    }
-
-    .parallax-content {
-        position: relative;
-        z-index: 1;
-    }
-
-
-
-
-
-
-    .contact-section {
-        padding: 80px 20px;
-        text-align: center;
-        background-color: #050505;
-    }
-
-    .contact-section h2 {
-        margin-bottom: 40px;
-    }
-
-    .contact-links {
-        display: flex;
-        justify-content: center;
-    }
-
-    .contact-links a {
-        display: inline-block;
-        margin: 0 10px;
-        font-size: 20px;
-        color: #efe6e6;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-
-    .contact-links a:hover {
-        color: #007bff;
-    }
-
-
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding: 20px;
-        background-color: #010711;
-        background-image:
-                radial-gradient(at 47% 33%, hsl(272, 93%, 63%) 0, transparent 59%),
-                radial-gradient(at 82% 65%, hsl(351, 80%, 56%) 0, transparent 55%);
-
-    }
-
-    .sectionFooter1 {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .sectionFooter1 h3 {
-        margin-bottom: 5px;
-        color: #000000;
-    }
-
-    .footer p {
-        margin: 0;
-        color: whitesmoke;
-    }
-
-
-
-
-    .instagram-container {
-        background-color: #070707;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between; /* Распределение постов по ширине контейнера */
-        width: 100%; /* Ширина контейнера по умолчанию */
-        height: auto; /* Автоматическая высота, чтобы содержимое подстраивалось по высоте */
-
-    }
-
-
-    .instagram-post {
-        width: calc(20% - 10px); /* Ширина каждого поста (по 5 постов в ряду) с учетом отступов */
-        margin-bottom: 20px; /* Отступ между рядами */
-    }
-
-    .instagram-post iframe {
-        width: 100%; /* Занимает всю доступную ширину внутри родительского контейнера */
-        height: 450px; /* Автоматическая высота, чтобы сохранить пропорции */
-    }
-
-    /* Для адаптивного дизайна */
-    @media screen and (max-width: 768px) {
-        .instagram-post {
-            width: calc(50% - 10px); /* Ширина каждого поста (по 2 поста в ряд) на меньших экранах */
-        }
-    }
-
-
-
-
-
-
-
-</style>
 <body>
 <header>
 
@@ -454,15 +27,7 @@
             <p class="mainP">Легкість, грація, майстерність: в кожному русі – мистецтво!</p>
             <a href="#aboutme" class="cta">View My Work</a>
         </div>
-<!--        <div class="hero-image">-->
-<!--            <img src="/static/Main1.jpg" alt="Developer Image">-->
-<!--        </div>-->
     </section>
-
-
-
-
-
 
     <section class="about" id="aboutme">
         <h2>About Me</h2>
@@ -473,23 +38,19 @@
             </div>
             <div class="about-image">
                 <a href="https://t.me/name_lucky_lucky" id="telegram-link">
-                    <img src="/static/mainpic.jpg" alt="About Image">
+                    <img src="/mainpic.jpg" alt="About Image">
                 </a>
             </div>
 
         </div>
     </section>
 
-
-
-
-
     <section class="photo-gallery">
         <div class="photo-wrapper">
-            <img src="/static/galereya4.JPG" alt="Photo 1">
-            <img src="/static/galereya2.JPG" alt="Photo 2">
-            <img src="/static/IMG_1635.JPG" alt="Photo 3">
-            <img src="/static/lena.JPG" alt="Photo 4">
+            <img src="/galereya4.JPG" alt="Photo 1">
+            <img src="/galereya2.JPG" alt="Photo 2">
+            <img src="/IMG_1635.JPG" alt="Photo 3">
+            <img src="/lena.JPG" alt="Photo 4">
 
         </div>
     </section>
@@ -511,37 +72,37 @@
         <h2 style="text-align: center">My Portfolio</h2>
         <div class="portfolio-items">
             <div class="portfolio-item">
-                <img src="/static/circle.JPG" alt="Project 1">
+                <img src="/circle.JPG" alt="Project 1">
                 <h3>Китай 2015-2016</h3>
                 <p>У 2015–2016 роках я мав унікальну можливість працювати в Китаї у цирковому виставі. Це був дивовижний досвід, повний випробувань та нових відкриттів. У цьому захоплюючому світі я зміг використати свої навички повітряного гімнаста та створити виступи, які захоплювали дух глядачів. Робота в Китаї надала мені цінний досвід роботи у міжнародній команді та дозволила розширити мої професійні знання. Цей період залишиться незабутнім у моїй кар'єрі, і я вдячний за можливість зануритися у культуру та творчу енергію Китаю. </p>
                 <a href="https://www.youtube.com/watch?v=SBgQyhJwQnA&t=149s" class="portfolio-link">View Show</a>
             </div>
             <div class="portfolio-item">
-                <img src="/static/prof111.JPG" alt="Project 2">
+                <img src="/prof111.JPG" alt="Project 2">
                 <h3>Китай 2016-2017</h3>
                 <p>У 2015–2016 роках я був частиною унікального театрального проекту в Китаї. Цей період був для мене неймовірним творчим зростанням і професійним розвитком. Робота в китайському театрі дала мені цінний досвід співпраці з місцевими артистами та режисерами, а також дозволила розширити мої горизонти в області сценічного мистецтва. Завдяки цій роботі я зміг поглибити знання про культуру Китаю та вивчити нові методи творчості. Цей досвід став для мене справжнім викликом, який допоміг мені стати кращим професіоналом і відкрити для себе нові горизонти в світі театрального мистецтва.</p>
                 <a href="https://www.youtube.com/watch?v=kBCr0VJm4o8" class="portfolio-link">View Project</a>
             </div>
             <div class="portfolio-item">
-                <img src="/static/port333.JPG" alt="Project 3">
+                <img src="/port333.JPG" alt="Project 3">
                 <h3>Китай 2017-2018</h3>
                 <p>У період з 2017 по 2018 роки я мав унікальну можливість працювати в Китаї в цирковому виступі. Це був захоплюючий період у моїй кар'єрі, повний яскравих вражень і творчих досягнень. В цирку я навчався і працював над різними акробатичними номерами, брав участь у створенні та втіленні різноманітних хореографічних вставок. Цей досвід допоміг мені покращити свої навички воздушного гімнаста і розширити арсенал трюків та виступів. Робота в китайському цирку також дала мені можливість ознайомитися з унікальною культурою та традиціями цієї країни, що надихнуло мене на створення нових та захопливих вистав.</p>
                 <a href="https://www.youtube.com/watch?v=b-XltBFb74I" class="portfolio-link">View Project</a>
             </div>
             <div class="portfolio-item">
-                <img src="/static/port123.JPG" alt="Project 4">
+                <img src="/port123.JPG" alt="Project 4">
                 <h3>Китай 2018-2019</h3>
                 <p>У період з 2018 по 2019 роки я приєднався до команди нічного клубу "Oscar" в Китаї, де продовжив свою творчу діяльність як воздушний гімнаст. Робота в нічному клубі була захоплюючим досвідом, який дав мені можливість не лише продемонструвати своє майстерство та талант на новій сцені, а й розширити свій художній арсенал. У "Oscar" я брав участь у створенні унікальних номерів, які поєднували в собі високий рівень акробатики, елегантність та харизму. Робота в нічному клубі надала мені цінний досвід взаємодії з аудиторією різних культур та національностей, що збагатило мій творчий шлях і надихнуло на нові творчі ідеї.</p>
                 <a href="https://www.youtube.com/watch?v=e1WU4-81VEY" class="portfolio-link">View Project</a>
             </div>
             <div class="portfolio-item">
-                <img src="/static/oscarDou.JPG" alt="Project 5">
+                <img src="/oscarDou.JPG" alt="Project 5">
                 <h3>Турция 2020-2022</h3>
                 <p>У період з 2020 по 2022 роки я працював у Туреччині, де продовжив свою кар'єру воздушного гімнаста. Цей період був для мене значущим, оскільки Туреччина надала мені нові можливості для розвитку та самовираження. Робота в Туреччині подарувала мені незабутні враження і досвід, розширивши горизонти мого творчого росту та дозволивши втілити в життя нові ідеї і концепції в виступах. Я був частиною команди професіоналів, з якими вдалося створити захоплюючі та запам'ятовуючі номери, завоювавши серця глядачів. Робота в Туреччині стала для мене важливим етапом у моїй кар'єрі, що допомогло мені вирости як артисту та розкрити свій творчий потенціал.</p>
                 <a href="https://www.youtube.com/watch?v=5PEGOo0mizk" class="portfolio-link">View Project</a>
             </div>
             <div class="portfolio-item">
-                <img src="/static/port60.JPG" alt="Project 6">
+                <img src="/port60.JPG" alt="Project 6">
                 <h3>Дубай 2022-2023</h3>
                 <p>У період з 2022 по 2023 роки я працював у Дубаї, де продовжив свою кар'єру в якості воздушного гімнаста. Робота в цьому світовому центрі розваг була для мене натхненним та захоплюючим досвідом. У Дубаї я брав участь у виступах у престижних розважальних комплексах, де міг демонструвати свої навички перед великою аудиторією з різних країн світу.
 
@@ -551,27 +112,12 @@
         </div>
     </section>
 
-
-
     <section class="parallax-section" id="parallax">
         <div class="parallax-content">
             <h2>Пластика, пристрасть, професіоналізм: у кожному виступі - унікальність!</h2>
             <p>Його рухи виблискують витонченість і енергію, втілюючи пристрасть до свого мистецтва. </p>
         </div>
     </section>
-
-
-<!--    <section class="order">-->
-<!--        <br><br>-->
-
-<!--        <h1 class="order-text" > I'm available for freelance work</h1>-->
-<!--        <button>-->
-<!--            <a href="mailto:harovyuk.vadim@icloud.com"><i class="fas fa-envelope"></i> Email Me</a>-->
-<!--        </button>-->
-
-<!--    </section>-->
-
-
 
     <div class="instagram-container">
         <div class="instagram-post">
@@ -601,16 +147,7 @@
             </blockquote>
             <script async src="//www.instagram.com/embed.js"></script>
         </div>
-
-
-
-        <!-- Повторите блок .instagram-post для каждого дополнительного поста -->
     </div>
-
-
-
-
-
 
     <section class="contact-section" id="contactme">
         <h2>Contact Me</h2>
@@ -623,14 +160,6 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-
 </main>
 
 <footer class="footer">
@@ -638,8 +167,9 @@
         <h3>Vadim Kharovyuk</h3>
 <!--        <p>Ваше имя</p>-->
     </div>
+    <p> Portfolio. All rights reserved.</p>
+    <p>&copy; 2022-2024  </p>
 
-    <p>&copy; 2022-2024 Portfolio. All rights reserved.</p>
 </footer>
 
 
