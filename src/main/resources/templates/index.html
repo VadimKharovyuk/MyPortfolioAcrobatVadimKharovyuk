@@ -225,8 +225,13 @@
     .order {
         height: 200px;
         background-color: #070707;
-        text-align:center /* Размещение содержимого секции по правому краю */
+        border-radius: 30px;
+        text-align: center; /* Размещение содержимого секции по центру */
+
     }
+
+
+
 
     button {
         background-color: #2584e3; /* Цвет фона кнопки */
@@ -253,12 +258,15 @@
 
 
 
-    .order-text{
-        text-align: center;
-        color: white;
-        margin-top:0px;
-
+    .order-text {
+        text-align: center; /* Центрирование текста */
+        background: linear-gradient(90deg, #12eeba, #b807e0); /* Градиентный фон */
+        -webkit-background-clip: text; /* Определение области, которую следует закрасить градиентом */
+        background-clip: text;
+        -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
+        margin-top: 0px; /* Отступ сверху */
     }
+
 
     .navMain {
         position: fixed;
@@ -307,6 +315,7 @@
 
 
     .parallax-section {
+
         height: 650px; /* Высота секции */
         background-image: url('/static/paralax1.JPG'); /* Фоновое изображение */
         /*background-size: cover;*/
@@ -363,8 +372,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #f6f1f1;
+
         padding: 20px;
+        background-color: #010711;
+        background-image:
+                radial-gradient(at 47% 33%, hsl(272, 93%, 63%) 0, transparent 59%),
+                radial-gradient(at 82% 65%, hsl(351, 80%, 56%) 0, transparent 55%);
+
     }
 
     .sectionFooter1 {
@@ -374,21 +388,25 @@
 
     .sectionFooter1 h3 {
         margin-bottom: 5px;
+        color: #000000;
     }
 
     .footer p {
         margin: 0;
+        color: whitesmoke;
     }
 
 
 
 
     .instagram-container {
+        background-color: #070707;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between; /* Распределение постов по ширине контейнера */
         width: 100%; /* Ширина контейнера по умолчанию */
         height: auto; /* Автоматическая высота, чтобы содержимое подстраивалось по высоте */
+
     }
 
 
@@ -478,9 +496,9 @@
 
 
     <section class="order">
-        <br><br>
+        <br><br> <br>
 
-        <h1 class="order-text" > I'm available for freelance work</h1>
+        <h1 class="order-text" > I'm available for freelance work</h1><br>
         <button>
             <a href="mailto:harovyuk.vadim@icloud.com"><i class="fas fa-envelope"></i> Email Me</a>
         </button>
