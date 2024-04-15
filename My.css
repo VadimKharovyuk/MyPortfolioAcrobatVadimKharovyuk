@@ -316,6 +316,7 @@ button i {
     }
 }
 .youtube-container {
+    color: black;
   background-color: black;
     display: flex;
     flex-wrap: wrap;
@@ -323,6 +324,7 @@ button i {
 }
 
 .youtube-container iframe {
+    color: black;
     background-color: black;
     margin-bottom: 20px;
 }
