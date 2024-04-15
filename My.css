@@ -315,3 +315,13 @@ button i {
         height: auto; /* Автоматически подстраивает высоту под измененную ширину */
     }
 }
+.youtube-container {
+  background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.youtube-container iframe {
+    margin-bottom: 20px;
+}
