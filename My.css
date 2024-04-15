@@ -106,6 +106,13 @@ nav a:hover {
     margin-bottom: 90px;
     margin-right: 40px;
 }
+@media screen and (max-width: 768px) {
+    .about-image img {
+        max-width: 300px; /* Уменьшите максимальную ширину на мобильных устройствах */
+        margin-bottom: 60px; /* Уменьшите отступ снизу на мобильных устройствах */
+        margin-right: 20px; /* Уменьшите отступ справа на мобильных устройствах */
+    }
+}
 .portfolio {
     padding: 80px 50px;
     background-color: #273352;
