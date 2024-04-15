@@ -323,5 +323,6 @@ button i {
 }
 
 .youtube-container iframe {
+    background-color: black;
     margin-bottom: 20px;
 }
