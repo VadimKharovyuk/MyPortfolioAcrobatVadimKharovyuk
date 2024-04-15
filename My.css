@@ -316,14 +316,14 @@ button i {
     }
 }
 .youtube-container {
-  /*  color: black;*/
-  /*background-color: black;*/
+    color: black;
+  background-color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .youtube-container iframe {
-    /*color: black;*/
-    /*background-color: black;*/
+    color: black;
+    background-color: black;
     margin-bottom: 20px;
 }
