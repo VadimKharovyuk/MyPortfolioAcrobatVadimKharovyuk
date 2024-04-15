@@ -37,6 +37,12 @@ nav a {
 nav a:hover {
     color: #d00535;
 }
+@media screen and (max-width: 768px) {
+    .navMain ul li {
+        display: block; /* Отображать элементы списка как блочные на мобильных устройствах */
+        margin-bottom: 10px; /* Отступ между элементами списка на мобильных устройствах */
+    }
+}
 .hero {
     display: flex;
     justify-content: space-between;
