@@ -200,7 +200,7 @@ button i {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px; /* Высота секции */
+    height: 550px; /* Высота секции */
     overflow-x: auto; /* Добавить горизонтальную прокрутку при необходимости */
 }
 .photo-wrapper {
