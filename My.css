@@ -2,11 +2,53 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light theme */
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Dark theme */
+body.dark-theme {
     background-color: #111927;
+    color: #f0f0f0;
     background-image:
             radial-gradient(at 47% 33%, hsl(163, 65%, 41%) 0, transparent 59%),
-            radial-gradient(at 82% 65%, hsl(218.18, 78%, 52%) 0, transparent 55%)
+            radial-gradient(at 82% 65%, hsl(218.18, 78%, 52%) 0, transparent 55%);
 }
+
+/* Theme toggle button */
+#themeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+/* ... (rest of your existing styles) ... */
+
+/* Adjustments for dark theme */
+body.dark-theme a {
+    color: #4da6ff;
+}
+
+body.dark-theme a:hover {
+    color: #09f114;
+}
+
+body.dark-theme header {
+    background-color: #070707;
+}
+
+body.dark-theme .portfolio {
+    background-color: #273352;
+}
+
 a {
     text-decoration: none;
     color: #007bff;
@@ -37,12 +79,7 @@ nav a {
 nav a:hover {
     color: #d00535;
 }
-@media screen and (max-width: 768px) {
-    .navMain ul li {
-        display: block; /* Отображать элементы списка как блочные на мобильных устройствах */
-        margin-bottom: 10px; /* Отступ между элементами списка на мобильных устройствах */
-    }
-}
+
 .hero {
     display: flex;
     justify-content: space-between;
