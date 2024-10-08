@@ -112,13 +112,7 @@ nav a:hover {
     margin-bottom: 90px;
     margin-right: 40px;
 }
-@media screen and (max-width: 768px) {
-    .about-image img {
-        max-width: 300px; /* Уменьшите максимальную ширину на мобильных устройствах */
-        margin-bottom: 60px; /* Уменьшите отступ снизу на мобильных устройствах */
-        margin-right: 20px; /* Уменьшите отступ справа на мобильных устройствах */
-    }
-}
+
 .portfolio {
     padding: 80px 50px;
     background-color: #273352;
@@ -317,17 +311,6 @@ button i {
     width: 100%; /* Занимает всю доступную ширину внутри родительского контейнера */
     height: 550px; /* Автоматическая высота, чтобы сохранить пропорции */
 }
-@media screen and (max-width: 768px) {
-    .instagram-post {
-        width: calc(50% - 10px); /* Ширина каждого поста (по 2 поста в ряд) на меньших экранах */
-    }
-}
-@media screen and (max-width: 768px) {
-    img {
-        max-width: 100%; /* Изображение будет занимать всю доступную ширину на меньших экранах */
-        height: auto; /* Автоматически подстраивает высоту под измененную ширину */
-    }
-}
 .youtube-container {
     color: black;
   background-color: black;
@@ -339,4 +322,109 @@ button i {
     color: black;
     background-color: black;
     margin-bottom: 20px;
+}
+/* New responsive styles */
+@media screen and (max-width: 1024px) {
+    .portfolio-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navMain {
+        position: static;
+        transform: none;
+    }
+
+    .navMain ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navMain ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .cta {
+        margin-left: 0;
+    }
+
+    .portfolio-items {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-gallery {
+        height: auto;
+    }
+
+    .photo-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .instagram-container {
+        flex-direction: column;
+    }
+
+    .instagram-post {
+        width: 100%;
+    }
+
+    .youtube-container iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .about h2, .portfolio h2 {
+        font-size: 24px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-links a {
+        margin: 10px 0;
+    }
 }
