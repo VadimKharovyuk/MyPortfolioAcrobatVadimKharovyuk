@@ -150,13 +150,14 @@ nav a:hover {
     margin-right: 40px;
 }
 
-.portfolio {
-    padding: 80px 50px;
-    background-color: #273352;
-    background-image:
-            radial-gradient(at 47% 33%, hsl(163, 65%, 41%) 0, transparent 59%),
-            radial-gradient(at 82% 65%, hsl(218.18, 78%, 52%) 0, transparent 55%)
-}
+
+/*.portfolio {*/
+/*    padding: 80px 50px;*/
+/*    background-color: #273352;*/
+/*    background-image:*/
+/*            radial-gradient(at 47% 33%, hsl(163, 65%, 41%) 0, transparent 59%),*/
+/*            radial-gradient(at 82% 65%, hsl(218.18, 78%, 52%) 0, transparent 55%)*/
+/*}*/
 .portfolio h2 {
     font-size: 30px;
     margin-bottom: 40px;
